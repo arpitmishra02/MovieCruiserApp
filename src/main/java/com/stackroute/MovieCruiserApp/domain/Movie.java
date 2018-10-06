@@ -1,16 +1,26 @@
 package com.stackroute.MovieCruiserApp.domain;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="Movie")
 public class Movie {
     @Id
+    @ApiModelProperty(notes = "Movie Specific ID")
     private String imdbId;
+    @ApiModelProperty(notes = "Title Of The Movie")
     private String movieTitle;
+    @ApiModelProperty(notes = "Poster")
     private String posterUrl;
+    @ApiModelProperty(notes = "Reviews")
     private String comment;
+    @ApiModelProperty(notes = "Rating By Viewers")
     private double rating;
+    @ApiModelProperty(notes = "Released In The Year")
     private String yearOfRelease;
 
     public Movie() {

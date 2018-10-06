@@ -6,26 +6,22 @@ import com.stackroute.MovieCruiserApp.exceptions.MovieNotFoundException;
 import com.stackroute.MovieCruiserApp.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
-@Primary
-@Qualifier("MovieServiceImpl")
-public class MovieServiceImpl implements MovieService{
+@Qualifier("MovieServiceImpl2")
+public class MovieServiceImpl2 implements MovieService{
+    private MovieRepository movieRepository;
 
-    private  MovieRepository movieRepository;
-
-    public MovieServiceImpl() {
+    public MovieServiceImpl2() {
     }
 
     @Autowired
-    public MovieServiceImpl(MovieRepository movieRepository)
+    public MovieServiceImpl2(MovieRepository movieRepository)
     {
-       this.movieRepository= movieRepository;
+        this.movieRepository= movieRepository;
     }
 
     @Override
@@ -77,7 +73,7 @@ public class MovieServiceImpl implements MovieService{
         {
             throw new MovieNotFoundException("Move Doesn't Exit");
         }
-            else {
+        else {
             return foundMovie;
         }
     }
@@ -95,4 +91,5 @@ public class MovieServiceImpl implements MovieService{
     public List<Movie> getAllMovie() {
         return movieRepository.findAll();
     }
+
 }

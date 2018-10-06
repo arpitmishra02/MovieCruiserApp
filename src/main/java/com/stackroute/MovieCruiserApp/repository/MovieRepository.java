@@ -7,5 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
 public interface MovieRepository extends JpaRepository<Movie,String> {
-    public Movie getByMovieTitle(String movieTitle) ;
+    public Movie findByMovieTitle(String movieTitle);
+    public Movie findByimdbId(String imdbId);
 }
