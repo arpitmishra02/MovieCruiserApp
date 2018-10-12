@@ -45,31 +45,36 @@ public class MovieServiceImpl implements MovieService{
 
 
     @Override
-    public void deleteByMovieId(String imdbId) throws MovieNotFoundException{
+    public boolean deleteByMovieId(String imdbId) throws MovieNotFoundException{
         if(getByMovieId(imdbId)== null)
             throw new MovieNotFoundException("Movie Does't Exit");
         else {
-            Movie movie = movieRepository.findByimdbId(imdbId);
+            Movie movie = movieRepository.findByImdbId(imdbId);
             movieRepository.delete(movie);
         }
+        return true;
     }
     @Override
-    public void deleteByMovieTitle(String movieTitle) throws MovieNotFoundException{
+    public boolean deleteByMovieTitle(String movieTitle) throws MovieNotFoundException{
         if(getByMovieTitle(movieTitle)== null)
             throw new MovieNotFoundException("Movie Doesn't Exit");
         else {
             Movie movie = getByMovieTitle(movieTitle);
             movieRepository.delete(movie);
         }
+        return true;
     }
 
 
     @Override
-    public Movie updateMovie(Movie movie) {
-        Movie updatedMovie= movieRepository.save(movie);
-        return updatedMovie;
+    public Movie updateMovie(Movie movie) throws MovieNotFoundException {
+        if (movieRepository.existsById(movie.getImdbId())) {
+            Movie updatedMovie = movieRepository.save(movie);
+            return updatedMovie;
+        }
+        else
+            throw new MovieNotFoundException("Movie Doesn't Exit");
     }
-
     @Override
     public Movie getByMovieTitle(String movieTitle) throws MovieNotFoundException{
         Movie foundMovie= movieRepository.findByMovieTitle(movieTitle);
@@ -83,7 +88,7 @@ public class MovieServiceImpl implements MovieService{
     }
     @Override
     public Movie getByMovieId(String imdbId) throws MovieNotFoundException {
-        Movie foundMovie = movieRepository.findByimdbId(imdbId);
+        Movie foundMovie = movieRepository.findByImdbId(imdbId);
         if (foundMovie == null) {
             throw new MovieNotFoundException("Move Doesn't Exit");
         } else {

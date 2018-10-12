@@ -1,9 +1,9 @@
 com/stackroute/MovieCruiserApp/service/MovieServiceImpl.class
 com/stackroute/MovieCruiserApp/domain/Movie.class
 com/stackroute/MovieCruiserApp/service/MovieServiceImpl2.class
+com/stackroute/MovieCruiserApp/controller/MovieController.class
 com/stackroute/MovieCruiserApp/MovieCruiserAppApplication.class
 com/stackroute/MovieCruiserApp/exceptions/MovieNotFoundException.class
-com/stackroute/MovieCruiserApp/controller/UserController.class
 com/stackroute/MovieCruiserApp/exceptions/MovieAlreadyExistException.class
 com/stackroute/MovieCruiserApp/service/MovieService.class
 com/stackroute/MovieCruiserApp/configuration/SwaggerConfig.class

@@ -6,6 +6,6 @@
 /home/cgi/Movie-Cruiser-App/src/main/java/com/stackroute/MovieCruiserApp/service/MovieService.java
 /home/cgi/Movie-Cruiser-App/src/main/java/com/stackroute/MovieCruiserApp/MovieCruiserAppApplication.java
 /home/cgi/Movie-Cruiser-App/src/main/java/com/stackroute/MovieCruiserApp/exceptions/MovieAlreadyExistException.java
+/home/cgi/Movie-Cruiser-App/src/main/java/com/stackroute/MovieCruiserApp/controller/MovieController.java
 /home/cgi/Movie-Cruiser-App/src/main/java/com/stackroute/MovieCruiserApp/exceptions/MovieNotFoundException.java
 /home/cgi/Movie-Cruiser-App/src/main/java/com/stackroute/MovieCruiserApp/service/MovieServiceImpl.java
-/home/cgi/Movie-Cruiser-App/src/main/java/com/stackroute/MovieCruiserApp/controller/UserController.java

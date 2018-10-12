@@ -1,1 +1,4 @@
 com/stackroute/MovieCruiserApp/MovieCruiserAppApplicationTests.class
+com/stackroute/MovieCruiserApp/service/MovieServiceTest.class
+com/stackroute/MovieCruiserApp/controller/MovieControllerTest.class
+com/stackroute/MovieCruiserApp/repository/MovieRepositoryTest.class

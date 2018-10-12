@@ -1,13 +1,14 @@
 package com.stackroute.MovieCruiserApp.domain;
 
 import io.swagger.annotations.ApiModelProperty;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+//import javax.persistence.Entity;
+//
+//import javax.persistence.Table;
 
-@Entity
-@Table(name="Movie")
+@Document
 public class Movie {
     @Id
     @ApiModelProperty(notes = "Movie Specific ID")

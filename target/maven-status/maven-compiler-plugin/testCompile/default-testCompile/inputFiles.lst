@@ -1,1 +1,4 @@
 /home/cgi/Movie-Cruiser-App/src/test/java/com/stackroute/MovieCruiserApp/MovieCruiserAppApplicationTests.java
+/home/cgi/Movie-Cruiser-App/src/test/java/com/stackroute/MovieCruiserApp/repository/MovieRepositoryTest.java
+/home/cgi/Movie-Cruiser-App/src/test/java/com/stackroute/MovieCruiserApp/controller/MovieControllerTest.java
+/home/cgi/Movie-Cruiser-App/src/test/java/com/stackroute/MovieCruiserApp/service/MovieServiceTest.java
